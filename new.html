@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <style>
+        /* Common styles for both desktop and mobile */
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+        .portfolio {
+            color: gold;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            height: 80px;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 10;
+            box-shadow: 10px 10px 15px rgba(255, 251, 2, 0.3);
+        }
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+        li {
+            font-size: 25px;
+            margin-left: 50px;
+        }
+        #hero {
+            width: 100%;
+            height: 500px;
+            background-color: black;
+            display: flex;
+            box-shadow: 10px 10px 15px rgba(255, 251, 2, 0.3);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .title {
+            text-align: center;
+        }
+        .title h1 {
+            color: gold;
+            font-size: 50px;
+        }
+        .container {
+            font-size: 24px;
+            border-right: 2px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 25ch;
+            animation: blink 0.75s step-end infinite;
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .img-div {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            background-color: gold;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-div img {
+            width: 150px;
+            height: 300px;
+            filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.9));
+        }
+        #about-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            background-color: black;
+            padding: 40px 20px;
+        }
+        .about-us-img img {
+            width: 90%;
+            height: auto;
+        }
+        .about-text {
+            width: 90%;
+            margin-top: 20px;
+            color: white;
+        }
+        #skills {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            text-align: center;
+            width: 100%;
+            color: gold;
+        }
+        #skills h1 {
+            font-size: 50px;
+        }
+        #skills-img {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        #skills-img img {
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                max-width: 768px;
+                flex-direction: column;
+                height: auto;
+            }
+            ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+            li {
+                margin: 10px 0;
+                font-size: 20px;
+            }
+            .title h1 {
+                font-size: 35px;
+            }
+            .container {
+                font-size: 18px;
+            }
+            .img-div {
+                width: 200px;
+                height: 200px;
+            }
+            .img-div img {
+                width: 100px;
+                height: 200px;
+            }
+            .about-us-img img {
+                width: 100%;
+            }
+            .about-text {
+                width: 100%;
+                margin: 20px 10px;
+            }
+            #skills-img img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title h1 {
+                font-size: 28px;
+            }
+            .container {
+                font-size: 14px;
+            }
+            .img-div {
+                width: 150px;
+                height: 150px;
+            }
+            .img-div img {
+                width: 75px;
+                height: 150px;
+            }
+            #skills h1 {
+                font-size: 40px;
+            }
+            #skills-img img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <h1 class="portfolio">portfolio</h1>
+        <nav>
+            <ul>
+                <a href="#hero"><li>home</li></a>
+                <a href="#about-us"><li>about</li></a>
+                <a href="#skills"><li>skills</li></a>
+                <li>experience</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="hero">
+        <div class="title">
+            <h1> <span>Amil</span> is here</h1>
+            <h2>I’m <span class="container" id="text"></span></h2>
+        </div>
+        <div class="img-div">
+            <img src="amil.png" alt="Amil">
+        </div>
+    </div>
+
+    <div style="width: 100%; height: 20px; background-color: gold;"></div>
+
+    <div id="about-us">
+        <div class="about-us-img">
+            <img src="about.png" alt="About Me">
+        </div>
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>Hello! I’m Amil, a 22-year-old SEO specialist and WordPress developer from Faridabad, Haryana. My primary focus is on search engine optimization, helping websites rank higher and connect with their audience.
+                As a self-learner, I continuously enhance my skills in the digital landscape, including creating user-friendly websites with WordPress and graphic design using Canva. I believe every project is an opportunity to grow.
+                In my free time, I love exploring new skills and staying updated with the latest trends in technology. Feel free to connect with me on social media or reach out via email!</p>
+        </div>
+    </div>
+
+    <div style="width: 100%; height: 20px; background-color: gold;"></div>
+
+    <div id="skills">
+        <h1>Skills</h1>
+        <div id="skills-img">
+            <img src="seo.jpg" alt="SEO">
+            <img src="photo-1654277041042-8927699fcfd2.jpg" alt="Social Media Marketing">
+            <img src="facebook-ads-logo.png" alt="Facebook Ads">
+            <img src="wordpress-581849_1280.jpg" alt="WordPress">
+        </div>
+        <div id="skills-img">
+            <img src="5308280_ab92_2.jpg" alt="Canva">
+            <img src="4781249.webp" alt="Google Ads">
+            <img src="images.png" alt="HTML">
+            <img src="images.jpg" alt="CSS">
+        </div>
+    </div>
+
+    <script>
+        const sentences = [
+            " a SEO expert.",
+            " a Facebook ad specialist.",
+            " a Google ad specialist.",
+            " a Digital Marketer."
+        ];
+
+        let sentenceIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < sentences[sentenceIndex].length) {
+                document.getElementById("text").innerHTML += sentences[sentenceIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                sentenceIndex++;
+                if (sentenceIndex < sentences.length) {
+                    charIndex = 0;
+                    setTimeout(() => {
+                        document.getElementById("text").innerHTML = "";
+                        type();
+                    }, 1000);
+                } else {
+                    sentenceIndex = 0;
+                    setTimeout(() => {
+                        document.getElementById("text").innerHTML = "";
+                        type();
+                    }, 1000);
+                }
+            }
+        }
+
+        type();
+    </script>
+</body>
+</html>
